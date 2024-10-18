@@ -5,7 +5,7 @@ body {
 
 /* Navbar Slide-in Animation */
 .navbar {
-  background-color: #1ce783;
+  background-color: black;
   transform: translateY(-100%);
   animation: slideDown 1s forwards ease-in-out;
 }
