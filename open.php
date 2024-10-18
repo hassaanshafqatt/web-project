@@ -1,3 +1,7 @@
+<?php
+$movie = $_GET['link'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,19 +12,22 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="movie.css">
+    <link rel="stylesheet" href="movie.css" />
   </head>
   <body>
-
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">< Back</a>
+      <a class="navbar-brand" href="index.php">< Back</a>
     </nav>
     <div
       id="trailer"
       class="section d-flex justify-content-center embed-responsive embed-responsive-16by9"
     >
-      <video autoplay class="embed-responsive-item" src="https://spookieghst.com/files/movies/Oppenheimer%20%282023%29/Oppenheimer.2023.1080p.BluRay.DD5.1.x264-GalaxyRG%5BTGx%5D.mkv" controls>
-      </video>
+      <video
+        autoplay
+        class="embed-responsive-item"
+        src="<?php echo $movie; ?>"
+        controls
+      ></video>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
