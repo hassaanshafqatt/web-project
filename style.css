@@ -1,0 +1,142 @@
+body {
+  background-color: #14171a;
+  color: #ffffff;
+}
+
+/* Navbar Slide-in Animation */
+.navbar {
+  background-color: black;
+  transform: translateY(-100%);
+  animation: slideDown 1s forwards ease-in-out;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+.nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #333333;
+}
+
+/* Search Box Focus Animation */
+.form-control {
+  width: 300px;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+  width: 350px;
+  box-shadow: 0 0 8px rgba(28, 231, 131, 0.8);
+}
+
+/* Uniform card sizing */
+.card {
+  background-color: #1f2327;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  min-height: 100%; /* Ensure all cards have equal minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Card Hover Animation */
+.card:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 8px 20px rgba(28, 231, 131, 0.8); /* Add shadow */
+}
+
+/* Fade-in Animation for Cards */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.card .btn-primary {
+  background-color: rgba(32, 160, 96, 0.8);
+  border-color: rgba(32, 160, 96, 0.8);
+}
+
+.card .btn-primary:hover {
+  background-color: rgba(28, 231, 131, 0.8);
+
+}
+
+.card .btn-primary:active  {
+  background-color: rgba(28, 231, 131, 0.8) !important;
+  border-color: rgba(32, 160, 96, 0.8) !important;
+
+}
+.card .btn-primary:focus {
+  background-color: rgba(28, 231, 131, 0.8) !important;
+  border-color: rgba(32, 160, 96, 0.8) !important;
+  box-shadow: 0 0 0 0.2rem rgba(32, 160, 96, 0.8) !important;
+
+}
+
+/* Delay animation for each card */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+
+.card-img-top {
+  height: 200px; 
+  object-fit: cover; 
+  transition: height 0.3s ease; 
+}
+
+
+@media (max-width: 1200px) {
+  .card-img-top {
+    height: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-img-top {
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 140px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 120px;
+  }
+}
